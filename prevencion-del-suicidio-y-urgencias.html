@@ -169,6 +169,9 @@
       object-fit: cover;
       border-radius: 50%;
     }
+    .brand-icon--light + .brand-icon--dark { display: none; }
+    :root[data-theme="dark"] .brand-icon--light { display: none; }
+    :root[data-theme="dark"] .brand-icon--light + .brand-icon--dark { display: block; }
 
     .brand-text {
       display: flex;
@@ -1045,7 +1048,8 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-container">
       <a href="./" class="brand-logo" aria-label="Ps. Iván Oda, inicio">
-        <img class="brand-icon" src="assets/logo-ivan-oda.png" width="44" height="44" alt="">
+        <img class="brand-icon brand-icon--light" src="assets/logo-light.svg" width="44" height="44" alt="">
+        <img class="brand-icon brand-icon--dark" src="assets/logo-dark.svg" width="44" height="44" alt="">
         <div class="brand-text">
           <span class="logo-title">Ps. Iván Oda</span>
           <span class="logo-subtitle">Terapia cognitivo-constructivista</span>
@@ -1370,6 +1374,6 @@
   </aside>
 
   <!-- Navegación móvil y selector de tema (compartido con el resto del sitio) -->
-  <script src="site.js?v=emergency-30"></script>
+  <script src="site.js?v=emergency-31"></script>
 </body>
 </html>
