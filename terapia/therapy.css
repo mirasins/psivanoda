@@ -113,3 +113,6 @@
 :root[data-theme="dark"] .therapy-page .evidence-context{background:#372720;border-color:#694b3f;border-left-color:var(--accent-peach)}
 :root[data-theme="dark"] .therapy-page .therapy-reading,:root[data-theme="dark"] .therapy-page .therapy-keywords span{background:#251d2a;border-color:#55445d}
 :root[data-theme="dark"] .therapy-evidence{background:#18131c}
+:root[data-theme="dark"] .therapy-page .reflection-grid article,:root[data-theme="dark"] .therapy-page .purpose-grid article,:root[data-theme="dark"] .therapy-page .evidence-grid article{--card-accent:var(--accent-lilac);--card-bg:var(--card-lilac)}
+:root[data-theme="dark"] .therapy-page .reflection-grid article:nth-child(2),:root[data-theme="dark"] .therapy-page .purpose-grid article:nth-child(2n),:root[data-theme="dark"] .therapy-page .evidence-grid article:nth-child(2){--card-accent:var(--accent-green);--card-bg:var(--card-green)}
+:root[data-theme="dark"] .therapy-page .reflection-grid article:nth-child(3),:root[data-theme="dark"] .therapy-page .purpose-grid article:nth-child(3){--card-accent:var(--accent-peach);--card-bg:var(--card-peach)}

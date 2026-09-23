@@ -131,8 +131,11 @@ if(location.hash==='#valores'&&!location.pathname.includes('/valores')) location
     const gap = Math.max(80, Math.min(130, width / 11));
     particles = [];
     for (let y = gap * .5; y < height + gap; y += gap)
-      for (let x = gap * .5; x < width + gap; x += gap)
-        particles.push({ x, y, ox: x, oy: y, vx: 0, vy: 0 });
+      for (let x = gap * .5; x < width + gap; x += gap) {
+        // Jitter the nodes so the mesh reads as organic, not as a square grid.
+        const jx = x + (Math.random() - .5) * gap * .8, jy = y + (Math.random() - .5) * gap * .8;
+        particles.push({ x: jx, y: jy, ox: jx, oy: jy, vx: 0, vy: 0 });
+      }
   };
 
   const move = event => {
@@ -227,7 +230,7 @@ if(location.hash==='#valores'&&!location.pathname.includes('/valores')) location
         if (d >= reach) continue;
         const fade = 1 - d / reach;
         const near = active ? Math.max(0, 1 - Math.hypot(pointer.x - (a.x + b.x) / 2, pointer.y - (a.y + b.y) / 2) / 280) : 0;
-        ctx.strokeStyle = rgba(mix(colors[1], colors[0], near), fade * ((darkTheme ? .3 : .24) + .55 * near));
+        ctx.strokeStyle = rgba(mix(colors[1], colors[0], near), fade * ((darkTheme ? .1 : .08) + .55 * near));
         ctx.lineWidth = 1 + near * 1.2;
         ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
       }
@@ -235,7 +238,7 @@ if(location.hash==='#valores'&&!location.pathname.includes('/valores')) location
 
     for (const p of particles) {
       const near = active ? Math.max(0, 1 - Math.hypot(pointer.x - p.x, pointer.y - p.y) / 260) : 0;
-      ctx.fillStyle = rgba(mix(colors[1], colors[0], near), (darkTheme ? .32 : .26) + .6 * near);
+      ctx.fillStyle = rgba(mix(colors[1], colors[0], near), (darkTheme ? .14 : .12) + .6 * near);
       ctx.beginPath(); ctx.arc(p.x, p.y, 1.8 + 3 * near, 0, Math.PI * 2); ctx.fill();
     }
 

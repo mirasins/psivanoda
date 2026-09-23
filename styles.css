@@ -196,7 +196,7 @@ body{background:#ece7ee}
 :root[data-theme="dark"] .rates-page .extra-prices details{background:#1f302a;border-color:#3f6557}
 :root[data-theme="dark"] .button,:root[data-theme="dark"] .booking-cta,:root[data-theme="dark"] .contact .booking-cta,:root[data-theme="dark"] .mobile-booking-primary{background:#865b95;color:#fff!important;border-color:#a17bad}
 :root[data-theme="dark"] .button:hover,:root[data-theme="dark"] .booking-cta:hover,:root[data-theme="dark"] .contact .booking-cta:hover,:root[data-theme="dark"] .mobile-booking-primary:hover{background:#9b6caa}
-:root[data-theme="dark"] .button.light{background:#f1e8f4;color:#2c2032}
+:root[data-theme="dark"] .button.light{background:#f1e8f4;color:#2c2032!important}
 :root[data-theme="dark"] .button.light:hover{background:#dfcee5}
 :root[data-theme="dark"] .contact,:root[data-theme="dark"] .home-page .contact{background:#211725}
 :root[data-theme="dark"] .quick-contact input,:root[data-theme="dark"] .quick-contact textarea{background:#18131c;color:var(--ink);border-color:#806c89}
