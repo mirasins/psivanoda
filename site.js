@@ -151,10 +151,15 @@ if(location.hash==='#valores'&&!location.pathname.includes('/valores')) location
         const a = particles[i], b = particles[j];
         const d = Math.hypot(a.x - b.x, a.y - b.y);
         if (d < 165) {
-          ctx.strokeStyle = darkTheme ? `rgba(211, 174, 223, ${.11 * (1 - d / 165)})` : `rgba(114, 81, 126, ${.055 * (1 - d / 165)})`;
+          ctx.strokeStyle = darkTheme ? `rgba(211, 174, 223, ${.22 * (1 - d / 165)})` : `rgba(114, 81, 126, ${.16 * (1 - d / 165)})`;
           ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
         }
       }
+    }
+    for (const p of particles) {
+      const near = Math.max(0, 1 - Math.hypot(pointer.x - p.x, pointer.y - p.y) / 230);
+      ctx.fillStyle = darkTheme ? `rgba(239, 179, 210, ${.18 + .5 * near})` : `rgba(114, 81, 126, ${.14 + .4 * near})`;
+      ctx.beginPath(); ctx.arc(p.x, p.y, 1.6 + 2.4 * near, 0, Math.PI * 2); ctx.fill();
     }
     for (let i = trail.length - 1; i >= 0; i--) {
       const point = trail[i]; point.life -= .035;
@@ -164,7 +169,7 @@ if(location.hash==='#valores'&&!location.pathname.includes('/valores')) location
       ctx.lineCap = 'round';
       for (let i = 1; i < trail.length; i++) {
         const a = trail[i - 1], b = trail[i];
-        ctx.strokeStyle = darkTheme ? `rgba(239, 179, 210, ${.2 * Math.min(a.life, b.life)})` : `rgba(146, 103, 126, ${.12 * Math.min(a.life, b.life)})`;
+        ctx.strokeStyle = darkTheme ? `rgba(239, 179, 210, ${.4 * Math.min(a.life, b.life)})` : `rgba(146, 103, 126, ${.3 * Math.min(a.life, b.life)})`;
         ctx.lineWidth = Math.max(1, b.size * b.life);
         ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.quadraticCurveTo(a.x, a.y, b.x, b.y); ctx.stroke();
       }
