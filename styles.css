@@ -31,7 +31,7 @@
 .rates-page .section-heading{align-items:center;margin-bottom:24px;background:#eee6f3;border-left:5px solid #72517e}
 .rates-page .section-heading h1{margin-bottom:0}
 .rates-page .section-heading>p{margin:0}
-.rates-page .price-card{border-radius:14px;border:1px solid #d9cde1;border-top:4px solid #8a6798;box-shadow:0 5px 16px #32153f05}
+.rates-page .price-card{background:#fff;border-radius:14px;border:1px solid #d9cde1;border-top:4px solid #8a6798;box-shadow:0 5px 16px #32153f05}
 .rates-page .price-card.student{background:#f1ebf7;border-top-color:#a4779a}
 .rates-page .relationship-prices{margin-top:24px;background:#faf0ec;border-color:#e5cfc4}
 .rates-page .relationship-prices .price-card{background:#fffaf7;border-color:#e5cfc4;border-top-color:#b58069}
