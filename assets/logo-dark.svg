@@ -8,7 +8,7 @@
 <clipPath id="u2"><path clip-rule="evenodd" d="M0,0H1254V1254H0Z M287,850a338,338 0 1,0 676,0a338,338 0 1,0 -676,0Z"/></clipPath>
 <symbol id="psi2" viewBox="0 0 240 160"><path d="M20,8H56V52C56,78 78,90 120,90C162,90 184,78 184,52V8H220V52C220,98 180,120 120,120C60,120 20,98 20,52Z M0,0H56V10H20C12,10 4,12 0,14Z M240,0H184V10H220C228,10 236,12 240,14Z M104,0H136V160H104Z M94,0H146V8H94Z"/></symbol>
 </defs>
-<rect width="1254" height="1254" fill="#120E18"/>
+<rect width="1254" height="1254" fill="#32153f"/>
 <g clip-path="url(#d2)">
 <rect width="1254" height="1254" fill="#2A1E38"/>
 <g clip-path="url(#i2)">
