@@ -359,30 +359,30 @@
     }
 
     .alert-option {
-      background: #ffffff;
-      border: 2px solid #f4cfd3;
+      background: var(--color-coral-action);
+      border: 2px solid transparent;
       border-radius: var(--radius-md);
       padding: 24px 22px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      box-shadow: 0 4px 14px rgba(153, 27, 27, 0.06);
+      box-shadow: 0 8px 22px rgba(153, 27, 27, 0.25);
       transition: var(--transition);
     }
-    .alert-option:hover { border-color: var(--color-coral-action); box-shadow: 0 10px 26px rgba(153, 27, 27, 0.12); }
+    .alert-option:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(153, 27, 27, 0.32); }
 
     .alert-option h3 {
       font-size: 1.2rem;
       font-weight: 700;
       line-height: 1.35;
-      color: #7f1d1d;
+      color: #ffffff;
       margin-bottom: 10px;
     }
 
     .alert-option p {
       font-size: 1rem;
       line-height: 1.6;
-      color: #7f1d1d;
+      color: #ffffff;
       margin-bottom: 22px;
     }
 
@@ -394,20 +394,20 @@
       gap: 16px;
       min-height: 68px;
       padding: 8px 26px 8px 8px;
-      background: var(--color-coral-action);
+      background: var(--surface-dark);
       color: #ffffff;
       text-decoration: none;
       border-radius: 50px;
-      box-shadow: 0 6px 18px rgba(198, 47, 65, 0.35);
+      box-shadow: 0 6px 18px rgba(36, 17, 53, 0.35);
       transition: var(--transition);
     }
-    .btn-call:hover { background: var(--color-coral-action-hover); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(198, 47, 65, 0.4); }
+    .btn-call:hover { background: #392558; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(36, 17, 53, 0.45); }
 
     .btn-call__num {
       min-width: 76px;
       padding: 8px 16px;
       border-radius: 50px;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.16);
       font-size: 1.75rem;
       font-weight: 700;
       line-height: 1.2;
@@ -1000,17 +1000,14 @@
       --color-text-main: #f4edf7;
       --color-text-muted: #cbbfd4;
       --color-border: #4b3c52;
-      --color-coral-action: #ff6b81;
-      --color-coral-action-hover: #ff8a9c;
+      --color-coral-action: #d63a4f;
+      --color-coral-action-hover: #c02f43;
       color-scheme: dark;
     }
     :root[data-theme="dark"] .site-header { background: rgba(24, 19, 28, .94); }
     :root[data-theme="dark"] .page-header { background: radial-gradient(circle at 50% 0%, #2c2032 0%, #221a28 60%, #18131c 100%); }
     :root[data-theme="dark"] .alert-banner-emergency { background: #2a171d; }
     :root[data-theme="dark"] .alert-header h2 { color: #ff9b9b; }
-    :root[data-theme="dark"] .alert-option { border-color: #5c333c; }
-    :root[data-theme="dark"] .alert-option h3,
-    :root[data-theme="dark"] .alert-option p { color: #f0b9b9; }
     :root[data-theme="dark"] .btn-nav,
     :root[data-theme="dark"] .btn-primary { background: #865b95; border-color: #a17bad; }
     :root[data-theme="dark"] .btn-nav:hover,
