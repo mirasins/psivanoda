@@ -986,17 +986,17 @@
       .theme-menu { position: absolute; top: calc(100% + 9px); right: 0; width: 170px; box-shadow: 0 16px 40px rgba(36, 17, 53, .2); }
     }
 
-    /* Fondo interactivo de site.js: fijo, sobre el contenido pero sin bloquear clics */
+    /* Fondo interactivo de site.js: detras del contenido, sin bloquear clics */
     #gesture-trail {
       position: fixed;
       inset: 0;
-      z-index: 30;
+      z-index: 1;
       width: 100%;
       height: 100%;
       pointer-events: none;
-      mix-blend-mode: multiply;
     }
-    :root[data-theme="dark"] #gesture-trail { mix-blend-mode: screen; opacity: .85; }
+    body > main, body > .site-footer { position: relative; z-index: 2; }
+    :root[data-theme="dark"] #gesture-trail { opacity: .85; }
     @media (prefers-reduced-motion: reduce), (hover: none) { #gesture-trail { display: none; } }
     @media print { #gesture-trail { display: none; } }
 
@@ -1369,6 +1369,6 @@
   </aside>
 
   <!-- Navegación móvil y selector de tema (compartido con el resto del sitio) -->
-  <script src="site.js?v=emergency-27"></script>
+  <script src="site.js?v=emergency-28"></script>
 </body>
 </html>

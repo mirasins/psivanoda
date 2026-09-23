@@ -103,17 +103,15 @@ h3{line-height:1.3;text-wrap:balance}
   .home-page .quick-contact{gap:24px}
 }
 
-/* Decorative cursor trail: drawn over content (blended, never blocks interaction), below the header. */
+/* Decorative cursor trail: sits behind cards and content, above the plain page background. */
 #gesture-trail{
   position:fixed;
   inset:0;
-  z-index:30;
+  z-index:1;
   width:100%;
   height:100%;
   pointer-events:none;
-  mix-blend-mode:multiply;
 }
-:root[data-theme="dark"] #gesture-trail{mix-blend-mode:screen}
 /* Only content needs to sit above the decorative canvas. Do not override
    sticky/fixed navigation or create a competing header stacking context. */
 body > main,body > footer{position:relative;z-index:2}
