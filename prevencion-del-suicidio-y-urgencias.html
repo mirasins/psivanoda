@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <script>(function(){var p="system";try{p=localStorage.getItem("psivanoda-theme")||"system"}catch(e){}var d=p==="system"?(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"):p;document.documentElement.dataset.theme=d;document.documentElement.dataset.themePreference=p;document.documentElement.style.colorScheme=d})()</script>
 
   <title>Prevención del Suicidio y Urgencias | Psicología &amp; Bienestar</title>
   <meta name="description" content="Guía de urgencias de salud mental en Chile: líneas de ayuda (*4141 las 24 horas, SAMU 131), cómo actuar ante crisis suicidas, psicosis, consumo de sustancias y pánico, y marco legal de la hospitalización.">
@@ -49,6 +50,9 @@
       /* Coral con contraste AA para texto blanco (el coral original da 3,7:1) */
       --color-coral-action: #c62f41;
       --color-coral-action-hover: #a8232f;
+
+      /* Superficie siempre oscura (footer, header móvil, franja de ayuda): no cambia con el tema */
+      --surface-dark: #241135;
 
       --radius-sm: 8px;
       --radius-md: 14px;
@@ -111,7 +115,7 @@
       top: -80px;
       left: 12px;
       z-index: 2000;
-      background: var(--color-primary);
+      background: var(--surface-dark);
       color: #fff;
       padding: 10px 18px;
       border-radius: var(--radius-sm);
@@ -162,16 +166,7 @@
       flex-shrink: 0;
       width: 44px;
       height: 44px;
-      background: var(--color-primary);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-coral);
-      font-family: 'Cinzel', serif;
-      font-size: 1.5rem;
-      border: 2px solid var(--color-purple);
-      box-shadow: var(--shadow-sm);
+      object-fit: contain;
     }
 
     .brand-text {
@@ -227,7 +222,7 @@
       max-height: calc(100vh - var(--header-h));
       max-height: calc(100dvh - var(--header-h));
       overflow-y: auto;
-      background: #ffffff;
+      background: var(--color-white);
       flex-direction: column;
       gap: 6px;
       padding: 20px 20px 24px;
@@ -262,7 +257,7 @@
       justify-content: center;
       min-height: 44px;
       margin-top: 8px;
-      background: var(--color-primary);
+      background: var(--surface-dark);
       color: #fff;
       padding: 9px 20px;
       font-size: 0.95rem;
@@ -432,7 +427,7 @@
 
     .content-block > p {
       font-size: 1.05rem;
-      color: #3b2c45;
+      color: var(--color-text-main);
       margin-bottom: 20px;
       max-width: 70ch;
     }
@@ -491,7 +486,7 @@
 
     .emergency-table td {
       padding: 0 0 14px;
-      color: #3b2c45;
+      color: var(--color-text-main);
     }
 
     .emergency-table td::before {
@@ -587,7 +582,7 @@
       padding-left: 28px;
       margin-bottom: 12px;
       font-size: 0.98rem;
-      color: #3b2c45;
+      color: var(--color-text-main);
       max-width: 70ch;
     }
 
@@ -684,11 +679,11 @@
       transition: var(--transition);
       box-shadow: 0 4px 14px rgba(112, 46, 134, 0.3);
     }
-    .btn-primary:hover { background: var(--color-primary); }
+    .btn-primary:hover { background: var(--surface-dark); }
 
     /* ───────── Footer ───────── */
     .site-footer {
-      background: var(--color-primary);
+      background: var(--surface-dark);
       color: #d1c6d8;
       padding: 48px 0 calc(32px + var(--dock-h) + env(safe-area-inset-bottom, 0px));
       border-top: 3px solid var(--color-purple);
@@ -829,7 +824,7 @@
         overflow: visible;
         clip: auto;
         white-space: normal;
-        background: var(--color-primary);
+        background: var(--surface-dark);
         color: #ffffff;
       }
       .emergency-table tbody { display: table-row-group; }
@@ -948,6 +943,78 @@
       .footer-actions { display: none; }
       .footer-brand strong, .footer-tagline, .footer-legal, .footer-link { color: #000; }
     }
+
+    /* ───────── Selector de tema (mismo widget que el resto del sitio) ───────── */
+    .theme-picker { position: relative; order: 5; width: 100%; padding-top: 5px; }
+    .theme-toggle {
+      display: flex; align-items: center; gap: 7px; width: 100%; min-height: 44px;
+      padding: 12px; border: 1px solid var(--color-border); border-radius: var(--radius-sm);
+      background: var(--color-white); color: var(--color-primary); cursor: pointer;
+      font-size: .86rem; line-height: 1; justify-content: flex-start; transition: var(--transition);
+    }
+    .theme-toggle:hover { border-color: var(--color-purple); }
+    .theme-toggle-icon { font-size: 1rem; color: var(--color-purple); }
+    .theme-toggle-current { font-weight: 600; }
+    .theme-toggle-chevron { margin-left: auto; transition: transform .18s ease; }
+    .theme-picker.open .theme-toggle-chevron { transform: rotate(180deg); }
+    .theme-menu {
+      position: static; width: 100%; margin-top: 7px; padding: 7px;
+      background: var(--color-white); border: 1px solid var(--color-border);
+      border-radius: 10px; box-shadow: none;
+    }
+    .theme-menu[hidden] { display: none; }
+    .theme-menu button {
+      display: grid; grid-template-columns: 22px 1fr 18px; align-items: center; gap: 7px;
+      width: 100%; padding: 12px; border: 0; border-radius: 6px; background: transparent;
+      color: var(--color-primary); text-align: left; cursor: pointer; font-size: .86rem;
+    }
+    .theme-menu button:hover, .theme-menu button:focus-visible { background: var(--color-surface); }
+    .theme-check { opacity: 0; color: var(--color-purple); font-weight: 700; }
+    .theme-menu button.selected .theme-check { opacity: 1; }
+
+    @media (min-width: 1400px) {
+      .theme-picker { order: 0; width: auto; padding-top: 0; margin: 0 4px; }
+      .theme-toggle { width: auto; min-height: 0; padding: 8px 11px; font-size: .78rem; }
+      .theme-toggle-label { display: none; }
+      .theme-menu { position: absolute; top: calc(100% + 9px); right: 0; width: 170px; box-shadow: 0 16px 40px rgba(36, 17, 53, .2); }
+    }
+
+    /* ───────── Modo oscuro ───────── */
+    :root[data-theme="dark"] {
+      --color-primary: #f4edf7;
+      --color-purple: #d3aedf;
+      --color-purple-light: #c59bd3;
+      --color-coral: #ff90a0;
+      --color-coral-hover: #ff7288;
+      --color-coral-soft: #3a1f27;
+      --color-cream: #18131c;
+      --color-surface: #241c29;
+      --color-white: #241c29;
+      --color-text-main: #f4edf7;
+      --color-text-muted: #cbbfd4;
+      --color-border: #4b3c52;
+      --color-coral-action: #ff6b81;
+      --color-coral-action-hover: #ff8a9c;
+      color-scheme: dark;
+    }
+    :root[data-theme="dark"] .site-header { background: rgba(24, 19, 28, .94); }
+    :root[data-theme="dark"] .page-header { background: radial-gradient(circle at 50% 0%, #2c2032 0%, #221a28 60%, #18131c 100%); }
+    :root[data-theme="dark"] .alert-banner-emergency { background: #2a171d; }
+    :root[data-theme="dark"] .alert-header h2 { color: #ff9b9b; }
+    :root[data-theme="dark"] .alert-option { border-color: #5c333c; }
+    :root[data-theme="dark"] .alert-option h3,
+    :root[data-theme="dark"] .alert-option p { color: #f0b9b9; }
+    :root[data-theme="dark"] .btn-nav,
+    :root[data-theme="dark"] .btn-primary { background: #865b95; border-color: #a17bad; }
+    :root[data-theme="dark"] .btn-nav:hover,
+    :root[data-theme="dark"] .btn-primary:hover { background: #9b6caa; }
+    :root[data-theme="dark"] .btn-call,
+    :root[data-theme="dark"] .phone-tag,
+    :root[data-theme="dark"] .dock-btn { background: var(--color-coral-action); }
+    :root[data-theme="dark"] .btn-call:hover,
+    :root[data-theme="dark"] .phone-tag:hover,
+    :root[data-theme="dark"] .dock-btn:hover { background: var(--color-coral-action-hover); }
+    :root[data-theme="dark"] .theme-menu { box-shadow: 0 16px 40px rgba(0, 0, 0, .45); }
   </style>
 <meta name="robots" content="noindex, nofollow">
 </head>
@@ -958,17 +1025,17 @@
   <!-- Navegación superior -->
   <header class="site-header" id="siteHeader">
     <div class="container header-container">
-      <a href="./" class="brand-logo" aria-label="Psicología &amp; Bienestar, ir al inicio">
-        <div class="brand-icon" aria-hidden="true">Ψ</div>
+      <a href="./" class="brand-logo" aria-label="Ps. Iván Oda, inicio">
+        <img class="brand-icon" src="assets/logo-ivan-oda.png" width="44" height="44" alt="">
         <div class="brand-text">
-          <span class="logo-title">Psicología &amp; Bienestar</span>
-          <span class="logo-subtitle">Cognitivo-Constructivista</span>
+          <span class="logo-title">Ps. Iván Oda</span>
+          <span class="logo-subtitle">Terapia cognitivo-constructivista</span>
         </div>
       </a>
-      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
+      <button type="button" class="menu-toggle menu" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navegacion">
         <span></span><span></span><span></span>
       </button>
-      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+      <nav class="nav-links" id="navegacion" aria-label="Navegación principal">
         <a href="./" class="nav-item">Inicio</a>
         <a href="./terapia/" class="nav-item">Terapia Metacognitiva</a>
         <a href="./saber-mas/identidad/" class="nav-item">Identidad</a>
@@ -978,7 +1045,7 @@
         <a href="./saber-mas/pensamiento/" class="nav-item">Pensamiento</a>
         <a href="prevencion-del-suicidio-y-urgencias.html" class="nav-item" aria-current="page">Urgencias &amp; Crisis</a>
         <a href="./#contacto" class="nav-item">Contacto</a>
-        <a href="./#contacto" class="btn-nav">Agendar Hora</a>
+        <a href="./#contacto" class="btn-nav nav-contact">Agendar Hora</a>
       </nav>
     </div>
   </header>
@@ -1283,42 +1350,7 @@
     </a>
   </aside>
 
-  <!-- Navegación móvil -->
-  <script>
-    (function () {
-      var toggle = document.getElementById('menuToggle');
-      var nav = document.getElementById('navLinks');
-      if (!toggle || !nav) return;
-
-      function setOpen(open) {
-        nav.classList.toggle('open', open);
-        toggle.setAttribute('aria-expanded', String(open));
-        toggle.setAttribute('aria-label', open ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
-      }
-
-      toggle.addEventListener('click', function () {
-        setOpen(!nav.classList.contains('open'));
-      });
-
-      nav.addEventListener('click', function (e) {
-        if (e.target.closest('a')) setOpen(false);
-      });
-
-      document.addEventListener('click', function (e) {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) setOpen(false);
-      });
-
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && nav.classList.contains('open')) {
-          setOpen(false);
-          toggle.focus();
-        }
-      });
-
-      window.matchMedia('(min-width: 1400px)').addEventListener('change', function (e) {
-        if (e.matches) setOpen(false);
-      });
-    })();
-  </script>
+  <!-- Navegación móvil y selector de tema (compartido con el resto del sitio) -->
+  <script src="site.js?v=emergency-25"></script>
 </body>
 </html>
