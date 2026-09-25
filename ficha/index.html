@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>(function(){var p="system";try{p=localStorage.getItem("psivanoda-theme")||"system"}catch(e){}var d=p==="system"?(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"):p;document.documentElement.dataset.theme=d;document.documentElement.dataset.themePreference=p;document.documentElement.style.colorScheme=d})()</script>
+<title>Ficha de ingreso | Ps. Iván Oda</title>
+<meta name="description" content="Completa tu ficha de ingreso para solicitar atención psicológica con Iván Oda.">
+<meta name="theme-color" content="#32153f">
+<link rel="icon" type="image/png" href="../assets/logo-ivan-oda.png">
+<link rel="preload" href="../assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../styles.css?v=emergency-40">
+<meta name="robots" content="noindex, nofollow">
+<style>
+.intake{padding-block:60px 80px}
+.intake-head{max-width:760px;margin-bottom:36px}
+.intake-head h1{font-size:clamp(2.4rem,4.5vw,3.6rem)}
+.intake-head p:not(.eyebrow){color:var(--muted)}
+.intake-head a{text-decoration:underline;text-underline-offset:3px}
+.intake-form{max-width:760px;display:grid;gap:28px}
+.intake-form fieldset{margin:0;padding:28px;border:1px solid var(--line);border-radius:16px;background:var(--wash);min-width:0}
+.intake-form legend{font-family:'Playfair Display',Georgia,serif;font-size:1.45rem;padding:0 8px;margin-left:-8px}
+.field{margin-top:18px}
+.field:first-of-type{margin-top:8px}
+.field label,.field .label{display:block;font-weight:500;margin-bottom:6px}
+.field .hint{display:block;font-size:.85rem;color:var(--muted);margin:-2px 0 8px}
+.field input:not([type=radio]),.field textarea{display:block;width:100%;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);padding:12px 14px;font:inherit}
+.field textarea{resize:vertical;min-height:110px}
+.field input:focus,.field textarea:focus{border-color:var(--purple)}
+.field .error{display:none;color:#b3261e;font-size:.85rem;margin-top:6px}
+.field.invalid input:not([type=radio]),.field.invalid textarea{border-color:#b3261e}
+.field.invalid .error{display:block}
+.req{color:var(--rose)}
+.consent-text{white-space:pre-line;max-height:340px;overflow:auto;padding:18px 20px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--muted);font-size:.92rem;line-height:1.7}
+.choice{display:flex!important;gap:10px;align-items:flex-start;margin-top:12px;cursor:pointer;font-weight:400!important}
+.choice input{width:18px;height:18px;margin-top:4px;accent-color:var(--purple)}
+.intake-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.intake-actions button{border:0;cursor:pointer}
+.intake-actions .button.secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.intake-status{min-height:1.5em;color:var(--muted);font-size:.92rem;margin:0}
+.privacy-note{font-size:.88rem;color:var(--muted);max-width:760px;margin-top:24px}
+:root[data-theme="dark"] .field .error{color:#ffb4ab}
+:root[data-theme="dark"] .field.invalid input:not([type=radio]),:root[data-theme="dark"] .field.invalid textarea{border-color:#ffb4ab}
+:root[data-theme="dark"] .intake-actions .button.secondary{background:transparent;color:var(--ink)!important;border:1px solid var(--line)}
+@media(max-width:720px){.intake{padding-block:36px 60px}.intake-form fieldset{padding:20px}.intake-actions .button{width:100%}}
+</style>
+</head>
+<body><div style="padding:8px 16px;text-align:center;background:#392d42;color:#fff;font:14px system-ui">Versión beta · En revisión · <a style="color:#fff;text-decoration:underline" href="https://github.com/mirasins/psivanoda/issues">Enviar comentarios</a></div>
+<a class="skip" href="#contenido">Ir al contenido</a>
+<header class="header"><div class="nav-wrap"><a class="brand" href="../" aria-label="Ps. Iván Oda, inicio"><img class="brand-logo brand-logo--light" src="../assets/logo-light.svg" width="64" height="64" alt=""><img class="brand-logo brand-logo--dark" src="../assets/logo-dark.svg" width="64" height="64" alt=""><span>Ps. Iván Oda<small>TERAPIA COGNITIVO-CONSTRUCTIVISTA · SANTIAGO</small></span></a><button class="menu" aria-expanded="false" aria-controls="navegacion">Menú <span aria-hidden="true">☰</span></button><nav id="navegacion" aria-label="Navegación principal"><a href="../#sobre-mi">Sobre mí</a><a href="../terapia/">Mi enfoque</a><a href="./">Valores</a><a href="../saber-mas/">Saber más</a><a class="nav-contact booking-cta" href="./">Agendar sesión <span aria-hidden="true">→</span></a></nav></div></header>
+<main id="contenido" class="intake"><div class="wrap">
+<div class="intake-head"><p class="eyebrow">SOLICITUD DE ATENCIÓN 2026</p><h1>Ficha de ingreso</h1>
+<p>Completa estos datos para solicitar tu primera sesión. Al terminar, se abrirá tu aplicación de correo con la ficha ya escrita y dirigida a <a href="mailto:agenda@psivanoda.cl">agenda@psivanoda.cl</a>. La ficha se envía cuando pulsas <strong>Enviar</strong> en tu correo.</p>
+<p>Los campos con <span class="req">*</span> son obligatorios.</p></div>
+<form class="intake-form" id="ficha" novalidate>
+<fieldset><legend>Motivo de consulta</legend>
+<div class="field"><label for="motivo">¿Qué te trae a consulta? <span class="req">*</span></label><span class="hint" id="motivo-hint">Escríbelo con tus palabras, tan breve como quieras. Lo conversaremos en la entrevista inicial.</span><textarea id="motivo" required aria-describedby="motivo-hint"></textarea><span class="error">Cuéntame brevemente el motivo de consulta.</span></div>
+</fieldset>
+<fieldset><legend>Datos personales</legend>
+<div class="field"><label for="nombre">Nombre completo <span class="req">*</span></label><span class="hint">Nombre y ambos apellidos.</span><input id="nombre" autocomplete="name" required><span class="error">Escribe tu nombre completo.</span></div>
+<div class="field"><label for="rut">RUT <span class="req">*</span></label><span class="hint">Sin puntos y con guion. Ejemplo: 12345678-5</span><input id="rut" autocomplete="off" required><span class="error">Revisa el RUT: sin puntos, con guion y con un dígito verificador válido.</span></div>
+<div class="field"><label for="nacimiento">Fecha de nacimiento del paciente <span class="req">*</span></label><input id="nacimiento" type="date" autocomplete="bday" required><span class="error">Indica una fecha de nacimiento válida.</span></div>
+</fieldset>
+<fieldset><legend>Contacto</legend>
+<div class="field"><label for="telefono">Número telefónico <span class="req">*</span></label><input id="telefono" type="tel" autocomplete="tel" placeholder="+56 9 1234 5678" required><span class="error">Escribe un número de teléfono.</span></div>
+<div class="field"><label for="direccion">Dirección <span class="req">*</span></label><textarea id="direccion" autocomplete="street-address" required style="min-height:80px"></textarea><span class="error">Escribe tu dirección.</span></div>
+<div class="field"><label for="prevision">Previsión</label><span class="hint">Por ejemplo: Fonasa, isapre o particular.</span><input id="prevision"></div>
+<div class="field"><label for="emergencia">Contacto de emergencia <span class="req">*</span></label><span class="hint">Nombre, relación contigo y teléfono.</span><input id="emergencia" required><span class="error">Indica un contacto de emergencia.</span></div>
+</fieldset>
+<fieldset><legend>Consentimiento informado</legend>
+<p>Lee con detención lo siguiente:</p>
+<div class="consent-text" tabindex="0" role="region" aria-label="Condiciones del servicio">Con respecto a los servicios:
+Se atenderá con tarifa diferencial con un mínimo de 16.500 pesos. Esto dependerá de lo acordado posterior a la entrevista de ingreso. Se tomarán en cuenta el nivel socioeconómico, el contexto actual del paciente, la modalidad (online, presencial o híbrida) y la demanda. 
+Se puede realizar un informe psicodiagnóstico orientativo para derivaciones, interconsulta y otros usos a pactar con posible costo asociado.
+
+*El arancel de las sesiones presenciales será mayor debido a los costos asociados a arriendo de box, secretaría y pago de impuestos.
+
+DEBERES DE LOS USUARIOS
+1. Si usted no se va a presentar, debe avisar con 24 horas de anticipación.  
+2. Tras dos inasistencias por trimestre se podrá dar finalizado el servicio por abandono del proceso.  
+3. Se solicita puntualidad, si usted se conecta con 20 o más minutos de atraso, se suspenderá la sesión. 
+4. Los horarios de atención asignados solo estarán sujetos a cambio hasta 24 horas previas. Estos serán acordados tras la entrevista inicial (gratuita). 
+5. En caso de faltar sin aviso a una sesión, se deberá hacer el pago de los gastos administrativos asociados. En el caso de la falta a sesión presencial se añadirá el costo de la hora-box.
+
+DERECHOS DE LOS USUARIOS
+Dentro de los derechos de los usuarios se ubican: 
+-Tener información oportuna y comprensible de su estado de salud.
+-Recibir un trato digno, respetando su privacidad, pudor e intimidad.
+-Ser llamado por su nombre y atendido con amabilidad.
+-Recibir una atención de salud de calidad y segura, según protocolos establecidos.
+-Ser informado de los costos de su atención de salud.
+-No ser grabado ni fotografiado con fines de difusión sin su permiso.
+-Aceptar o rechazar cualquier tratamiento y pedir el alta voluntaria en cualquier momento.
+
+INFORMACIÓN RELEVANTE
+• Toda la información derivada de su participación en cualquiera de los programas será conservada en forma de estricta, asegurando su confidencialidad y anonimato.
+• Si se considera que usted requiere atención especialista, se realizará la derivación correspondiente con hoja de interconsulta. 
+• El medio de comunicación oficial es el mail. El teléfono de contacto ha de ser utilizado estrictamente ante emergencias. Se sugiere tener como medio auxiliar las redes sociales.
+• En caso de no avisar al menos 24 horas antes de una reprogramación de sesión por motivos del terapeuta, la siguiente sesión se realizará de forma gratuita (online).
+- Las atenciones pueden ser grabadas o transcritas por IA. Estos documentos pueden ser solicitados por el paciente. 
+
+IMPORTANTE:
+• El secreto profesional se podrá quebrantar única y exclusivamente por los siguientes motivos:
+   -  En caso de que surja información que haga presumir un riesgo para su integridad.
+   -  En caso de que surja información que haga presumir un riesgo para la integridad de otros.
+   -  En caso de que surja información con la que se pueda presumir que se está frente a una situación que se puede judicializar o denunciar.
+*En caso de ser menor de edad, la aprobación de las condiciones antes mencionadas deberá ser aceptada o rechazada únicamente por el tutor legal.</div>
+<div class="field" id="consent-field"><span class="label" id="consent-label">¿Aceptas las condiciones del servicio? <span class="req">*</span></span>
+<div role="radiogroup" aria-labelledby="consent-label">
+<label class="choice"><input type="radio" name="consentimiento" value="si"> Sí, acepto.</label>
+<label class="choice"><input type="radio" name="consentimiento" value="no"> No estoy de acuerdo con las condiciones del servicio.</label></div>
+<span class="error">Para enviar la ficha debes aceptar las condiciones del servicio. Si tienes dudas sobre ellas, escríbeme a agenda@psivanoda.cl.</span></div>
+</fieldset>
+<div class="intake-actions"><button class="button" type="submit">Abrir mi correo con la ficha <span aria-hidden="true">↗</span></button><button class="button secondary" type="button" id="copiar">Copiar ficha</button></div>
+<p class="intake-status" id="estado" role="status" aria-live="polite"></p>
+</form>
+<p class="privacy-note">Esta página no guarda tus datos ni los envía a ningún servidor: solo prepara el mensaje en tu dispositivo. Si tu correo no se abre, usa <strong>Copiar ficha</strong> y pégala en un correo nuevo a agenda@psivanoda.cl.</p>
+</div></main>
+<script>
+(() => {
+  const form = document.getElementById('ficha');
+  const status = document.getElementById('estado');
+  const consentField = document.getElementById('consent-field');
+  const $ = id => document.getElementById(id).value.trim();
+
+  // Chilean RUT: 7-8 digits, hyphen, check digit computed with modulo 11.
+  const validRut = value => {
+    const m = /^(\d{7,8})-([\dkK])$/.exec(value.trim());
+    if (!m) return false;
+    let sum = 0, mul = 2;
+    for (let i = m[1].length - 1; i >= 0; i--) { sum += +m[1][i] * mul; mul = mul === 7 ? 2 : mul + 1; }
+    const dv = 11 - (sum % 11);
+    return m[2].toUpperCase() === (dv === 11 ? '0' : dv === 10 ? 'K' : String(dv));
+  };
+  const age = iso => {
+    const b = new Date(iso + 'T00:00'), t = new Date();
+    let a = t.getFullYear() - b.getFullYear();
+    if (t.getMonth() < b.getMonth() || (t.getMonth() === b.getMonth() && t.getDate() < b.getDate())) a--;
+    return a;
+  };
+
+  const check = el => {
+    let ok = el.value.trim() !== '' || !el.required;
+    if (ok && el.id === 'rut') ok = validRut(el.value);
+    if (ok && el.id === 'nacimiento') { const a = age(el.value); ok = a >= 0 && a < 120; }
+    el.closest('.field').classList.toggle('invalid', !ok);
+    el.setAttribute('aria-invalid', String(!ok));
+    return ok;
+  };
+  const inputs = [...form.querySelectorAll('input:not([type=radio]),textarea')];
+  inputs.forEach(el => {
+    el.addEventListener('blur', () => { if (el.value) check(el); });
+    el.addEventListener('input', () => { if (el.closest('.field').classList.contains('invalid')) check(el); });
+  });
+
+  const accepted = () => (form.querySelector('[name=consentimiento]:checked') || {}).value === 'si';
+  form.querySelectorAll('[name=consentimiento]').forEach(r => r.addEventListener('change', () => consentField.classList.toggle('invalid', !accepted())));
+
+  const validate = () => {
+    const bad = inputs.filter(el => !check(el));
+    consentField.classList.toggle('invalid', !accepted());
+    if (bad.length) { bad[0].focus(); status.textContent = 'Revisa los campos marcados.'; return false; }
+    if (!accepted()) { form.querySelector('[name=consentimiento]').focus(); status.textContent = 'Para enviar la ficha debes aceptar las condiciones del servicio.'; return false; }
+    return true;
+  };
+
+  const compose = () => {
+    const [y, m, d] = $('nacimiento').split('-');
+    const years = age($('nacimiento'));
+    const body = [
+      'FICHA DE INGRESO · Solicitud de atención 2026', '',
+      'Nombre completo: ' + $('nombre'),
+      'RUT: ' + $('rut').toUpperCase(),
+      'Fecha de nacimiento: ' + d + '-' + m + '-' + y + ' (' + years + ' años)',
+      'Número telefónico: ' + $('telefono'),
+      'Dirección: ' + $('direccion').replace(/\s*\n\s*/g, ', '),
+      'Previsión: ' + ($('prevision') || 'No indicada'),
+      'Contacto de emergencia: ' + $('emergencia'), '',
+      'Motivo de consulta:', $('motivo'), '',
+      'Consentimiento informado: Sí, acepto las condiciones del servicio.' +
+        (years < 18 ? ' (Paciente menor de edad: la aceptación corresponde al tutor legal.)' : ''),
+      'Fecha de la ficha: ' + new Date().toLocaleDateString('es-CL')
+    ].join('\n');
+    return { subject: 'Ficha de ingreso · ' + $('nombre'), body };
+  };
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!validate()) return;
+    const { subject, body } = compose();
+    status.textContent = 'Abriendo tu correo… Recuerda pulsar Enviar allí. Si no se abre, usa «Copiar ficha».';
+    location.href = 'mailto:agenda@psivanoda.cl?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+
+  document.getElementById('copiar').addEventListener('click', async () => {
+    if (!validate()) return;
+    const { subject, body } = compose();
+    try {
+      await navigator.clipboard.writeText('Para: agenda@psivanoda.cl\nAsunto: ' + subject + '\n\n' + body);
+      status.textContent = 'Ficha copiada. Pégala en un correo nuevo a agenda@psivanoda.cl.';
+    } catch (err) {
+      status.textContent = 'No se pudo copiar automáticamente. Escribe tus datos en un correo a agenda@psivanoda.cl.';
+    }
+  });
+})();
+</script>
+<footer><div class="wrap footer-inner"><a class="brand footer-brand" href="../"><img class="brand-logo brand-logo--light" src="../assets/logo-light.svg" width="64" height="64" alt=""><img class="brand-logo brand-logo--dark" src="../assets/logo-dark.svg" width="64" height="64" alt="">Ps. Iván Oda</a><p>Mirar · Comprender · Transformar</p><span>Terapia cognitivo-constructivista Santiago</span></div></footer>
+<script src="../site.js?v=emergency-40"></script>
+</body></html>
